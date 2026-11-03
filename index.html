@@ -1,0 +1,272 @@
+<title>Kettner's Kamota Speisekarte</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#FFFFFF; --ink:#161615; --muted:#5E5E58; --gold:#9C8550; --gold-ui:#B8A068;
+  --pink:#DE19AD; --pill:#ECEAE5; --line:#161615;
+  --sans:"Jost","Futura","Century Gothic",system-ui,sans-serif;
+  color-scheme: light;
+}
+/* Layout: eine ruhige Spalte wie die gedruckte Karte; ab Tablet zwei Spalten für Klassiker, Extrawurst und Getränke */
+html{background:var(--paper)}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.5}
+.wrap{max-width:860px;margin:0 auto;padding-inline:20px;padding-block:28px 56px}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;margin-bottom:36px}
+header img{width:min(260px,62vw);height:auto;display:block}
+.switch{display:inline-flex;border:1px solid #D9D6CE;border-radius:999px;padding:3px}
+.switch button{font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;border:0;background:none;color:var(--muted);padding:9px 14px;border-radius:999px;cursor:pointer}
+.switch button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.switch button:focus-visible{outline:2px solid var(--gold-ui);outline-offset:2px}
+.sec{position:relative;margin-bottom:44px;min-width:0}
+h2{font-weight:500;font-size:clamp(18px,3.4vw,22px);letter-spacing:.16em;text-transform:uppercase;margin:0 0 4px;padding-bottom:10px;border-bottom:2px solid var(--line);text-wrap:balance}
+ul{list-style:none;margin:0;padding:0}
+.dish{display:flex;gap:16px;justify-content:space-between;padding:14px 0 12px}
+.dtext{min-width:0;flex:1}
+.dish h3,.dname{margin:0;font-weight:500;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+.dname{text-transform:none;letter-spacing:.01em;font-size:16px}
+.pre{margin:0 0 2px;color:var(--muted);font-size:14px}
+.desc{margin:3px 0 0;color:var(--muted);font-size:15px;line-height:1.45;max-width:58ch}
+.dside{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex:none;text-align:right}
+.price{font-weight:500;font-size:16px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tag{font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:var(--pill);color:#4A4A45;padding:3px 8px;border-radius:4px;white-space:nowrap}
+.supp{font-size:12px;color:var(--muted);border:1px solid #C9C6BE;border-radius:4px;padding:2px 7px;white-space:nowrap;letter-spacing:.02em;font-weight:400;text-transform:none;vertical-align:2px}
+.dish.gold h3,.dish.gold .desc,.dish.gold .price{color:var(--gold)}
+.stamp{display:inline-block;margin:18px 0 8px 4px;transform:rotate(-6deg);border:2px solid var(--pink);border-radius:6px;padding:3px;color:var(--pink);background:var(--paper)}
+.st-in{border:1px solid var(--pink);border-radius:3px;padding:10px 14px 8px;min-width:190px}
+.st-title{font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-align:center;padding-bottom:6px;margin-bottom:6px;border-bottom:1px solid var(--pink)}
+.st-row{display:flex;justify-content:space-between;gap:14px;font-size:14px;line-height:1.7}
+.st-row i{font-style:normal;opacity:.8}
+.st-row b{font-weight:500}
+.sec-menu .dishes{clear:none}
+.menutab{border-collapse:collapse;margin-top:26px;padding-top:0;border-top:1px solid var(--line);width:min(100%,420px);font-variant-numeric:tabular-nums}
+.menutab thead th{font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-align:right;padding:14px 0 6px}
+.menutab tbody th{text-align:left;font-weight:400;padding:6px 0}
+.menutab td{text-align:right;font-weight:500;padding:6px 0}
+.note{margin:10px 0 0;color:var(--muted);font-size:14px;max-width:62ch}
+.gold-note{color:var(--gold);margin-top:16px}
+.sub{margin:18px 0 4px;font-weight:500;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.place{color:var(--muted);letter-spacing:.04em;text-transform:none;font-weight:400;font-size:14px;margin-left:6px}
+.cols{margin:0 0 6px;color:var(--muted);font-size:13px}
+.drinks li,.champ li{display:flex;gap:14px;justify-content:space-between;align-items:baseline;padding:7px 0}
+.champ .vint{color:var(--gold);font-weight:500;width:28px;flex:none}
+.champ .dname{flex:1;min-width:0}
+.vat{color:var(--muted);font-size:13px;margin-top:8px}
+@media (min-width:760px){
+  .cols2{display:grid;grid-template-columns:1fr 1fr;gap:0 48px;align-items:start}
+}
+@media (min-width:760px){
+  .menu-body{display:grid;grid-template-columns:200px minmax(0,1fr);gap:0 28px;align-items:start}
+  .stamp{margin:22px 0 0 -6px}
+  .st-in{min-width:0}
+}
+@media (max-width:520px){
+  .dish{gap:12px}
+}
+</style>
+<div class="wrap">
+  <header>
+    <img src="logo.png" alt="Kettner's Kamota" width="466" height="100">
+    <div class="switch" role="group" aria-label="Sprache / Language">
+      <button id="b-de" type="button" data-lang="de" aria-pressed="true">Deutsch</button>
+      <button id="b-en" type="button" data-lang="en" aria-pressed="false">English</button>
+    </div>
+  </header>
+  <main>
+  <div class="lang" lang="de" data-lang="de">
+    <section class="sec sec-menu">
+      <h2>Küss die Hand</h2>
+      <div class="menu-body">
+        <div class="stamp-col"><aside class="stamp" aria-label="Kleine Extrawurst"><div class="st-in"><div class="st-title">Kleine Extrawurst</div><div class="st-row"><span>Wintertrüffel <i>4 g</i></span><b>20</b></div><div class="st-row"><span>N25 Caviar <i>10 g</i></span><b>25</b></div></div></aside></div>
+        <div class="menu-main"><ul class="dishes">
+      <li class="dish">
+        <div class="dtext"><h3>Saibling, du Bohne!</h3><p class="desc">mit Nadelfisolen-Sakura-Salsa, mazeriertem Kopfsalat und saurer Sansho Milch</p></div>
+        <div class="dside"><span class="price">33</span><span class="tag">4-Gang</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Beef Tatar Cold Dog</h3><p class="desc">mit Ganserlfett, Letscho Kimchi Gremolata und Sauce Kettanaise</p></div>
+        <div class="dside"><span class="price">38</span><span class="tag">4-Gang</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Trout Terminator</h3><p class="desc">mit geselchtem Aal, sautierten Butterschwammerl und einer Hokkaido Ume Essig Nage</p></div>
+        <div class="dside"><span class="price">45</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Altsteirisches Backfleisch vom Kalbsbackerl</h3><p class="desc">auf warmem Eierstich mit marinierten Roten Rüben, steirischem Apfelessig, Kren und junger Kapuzinerkresse</p></div>
+        <div class="dside"><span class="price">48</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Paltentaler Schwammerlgulasch</h3><p class="desc">mit krossem Mangalitza Crunch, gebackener Veltliner Krabbe auf Pfifferlingsgulasch, Paprika Verde mit Kirschblütenessig</p></div>
+        <div class="dside"><span class="price">63</span><span class="tag">4-Gang</span></div>
+      </li>
+      <li class="dish gold">
+        <div class="dtext"><h3>Kamotes Kaasbretl</h3><p class="desc">mit Käse von der Kaas Kate und „Affineur Jumi“</p></div>
+        <div class="dside"><span class="price">28</span></div>
+      </li>
+      <li class="dish gold">
+        <div class="dtext"><h3>Gspusi aus dem Schilcherland</h3><p class="desc">vom Blauen Wildbacher mit Ennstaler Rahm</p></div>
+        <div class="dside"><span class="price">22</span><span class="supp">+11 im Menü</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Kaffeefahrt</h3><p class="desc">mit geeistem Kamota Arabica, karamellisiertem Blätterteig &amp; mazerierten Himbeeren</p></div>
+        <div class="dside"><span class="price">25</span><span class="tag">4-Gang</span></div>
+      </li></ul>
+      <table class="menutab"><thead><tr><td></td><th scope='col'>Menü</th><th scope='col'>Weinbegleitung</th></tr></thead><tbody><tr><th scope='row'>6 Gänge</th><td>166</td><td>99</td></tr><tr><th scope='row'>4 Gänge</th><td>127</td><td>66</td></tr></tbody></table>
+      <p class="note gold-note">Gold markierte Gerichte sind nicht im Menü enthalten – gerne als Ergänzung.</p>
+      <p class="note">Gerne offerieren wir Ihnen auch ein vegetarisches oder veganes Menü – sprechen Sie uns einfach an!</p></div>
+      </div>
+    </section>
+    <div class="cols2">
+      <section class="sec">
+        <h2>Wirtshausklassiker</h2>
+        <ul class="dishes">
+      <li class="dish">
+        <div class="dtext"><h3>Backhendl „Kamota“</h3><p class="desc">Ennstaler Gewürz, Paprika Sabayon, Marinade vom Bergpfeffer &amp; Pfefferoni</p></div>
+        <div class="dside"><span class="price">29 | 35</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Rottenmanner Kaasnocken</h3><p class="desc">mit Bergkaas, knusprigen Schalotten &amp; Yuzu Weinsosserl</p></div>
+        <div class="dside"><span class="price">27</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Kasleberkäs-Semmel „Sando“</h3><p class="desc">mit Kasleberkäs, Butterstriezel, Wasabisauerkraut &amp; Pfefferonischmiere</p></div>
+        <div class="dside"><span class="price">28</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Oma Kettner’s Kaiserschmarrn</h3><p class="desc">mit sanft geschmorten Zwetschgen &amp; Rahmeis von Tahiti Vanille</p></div>
+        <div class="dside"><span class="price">18</span></div>
+      </li></ul>
+      </section>
+      <section class="sec">
+        <h2>Extrawurst</h2>
+        <p class="note">Alle Gerichte der Extrawurst lassen sich gegen Aufpreis in Ihr Menü einbauen.</p>
+        <ul class="dishes">
+      <li class="dish">
+        <div class="dtext"><p class="pre">Im Ganzen gebackenes Spanferkelhaxerl</p><h3>Kamota Schweinerei</h3><p class="desc">mit Wasabi-Sauerkraut, Erdäpfel &amp; Grillsenf-Hollandaise</p></div>
+        <div class="dside"><span class="price">78</span><span class="supp">+39 im Menü</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><p class="pre">Knuspriges Roastbeef vom Wagyu A5 aus Kagoshima</p><h3>Schlaraffenland</h3><p class="desc">sanft gebratene Ganserlleber, N25 Caviar, Unagi Aal &amp; schwarzer Trüffel</p></div>
+        <div class="dside"><span class="price">133</span><span class="supp">+71 im Menü</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Long Dong Langusten Rossini</h3><p class="desc">mit Wagyu A5 Kagoshima, gebratener Ganserlleber Ennstaler Art, schwarzem Wintertrüffel &amp; St. Paul Languste</p></div>
+        <div class="dside"><span class="price">144</span><span class="supp">+77 im Menü</span></div>
+      </li></ul>
+      </section>
+      <section class="sec">
+        <h2>Aperitive &amp; Cocktails</h2>
+        <h4 class="sub">Aperitif</h4><ul class="drinks"><li><div class="dtext"><h3 class="dname">Sisi</h3><p class="desc">Rosé Winzersekt · Yuzu-Essenz · frische Minze</p></div><span class="price">12</span></li><li><div class="dtext"><h3 class="dname">Franz</h3><p class="desc">Grüner Veltliner Likörwein · Fever-Tree Tonic Water</p></div><span class="price">12</span></li><li><div class="dtext"><h3 class="dname">Kufsteiner Kutscher <span class="supp">alkoholfrei</span></h3><p class="desc">Martini Floreale · Fever-Tree Tonic Water</p></div><span class="price">10</span></li><li><div class="dtext"><h3 class="dname">Niki Lauda <span class="supp">alkoholfrei</span></h3><p class="desc">Martini Vibrante · Yuzu-Essenz · Almdudler</p></div><span class="price">10</span></li></ul><h4 class="sub">Cocktails</h4><ul class="drinks"><li><div class="dtext"><h3 class="dname">Ketti’s Japanese Pornstar</h3><p class="desc">Sake · Maracuja · Vanille · Shiso · Sakura · Yuzu-Essenz</p></div><span class="price">16</span></li><li><div class="dtext"><h3 class="dname">Negroni</h3><p class="desc">Gin · Campari · Vermouth</p></div><span class="price">16</span></li><li><div class="dtext"><h3 class="dname">Espresso Martini</h3><p class="desc">Vodka · Kaffeelikör · Vanille · Espresso</p></div><span class="price">16</span></li></ul>
+      </section>
+      <section class="sec">
+        <h2>Offene Champagner</h2>
+        <h4 class="sub">Bonnaire <span class="place">Cramant</span></h4><p class="cols">Glaserl 0,15 l | Flascherl 0,75 l</p><ul class="champ"><li><span class="vint">NV</span><h3 class="dname">Terroirs Grand Cru Blanc de Blancs</h3><span class="price">19 | 89</span></li><li><span class="vint">NV</span><h3 class="dname">Rosé Assemblage Brut</h3><span class="price">19 | 89</span></li></ul>
+      </section>
+    </div>
+    <p class="vat">Alle Preise in Euro inklusive der gesetzlichen Mehrwertsteuer</p>
+  </div>
+  <div class="lang" lang="en" data-lang="en" hidden>
+    <section class="sec sec-menu">
+      <h2>I Kiss Your Hand</h2>
+      <div class="menu-body">
+        <div class="stamp-col"><aside class="stamp" aria-label="Small extra treat"><div class="st-in"><div class="st-title">Small extra treat</div><div class="st-row"><span>Winter truffle <i>4 g</i></span><b>20</b></div><div class="st-row"><span>N25 caviar <i>10 g</i></span><b>25</b></div></div></aside></div>
+        <div class="menu-main"><ul class="dishes">
+      <li class="dish">
+        <div class="dtext"><h3>Char, You Silly Bean!</h3><p class="desc">Arctic char with green bean and sakura salsa, macerated butterhead lettuce and sour sansho milk</p></div>
+        <div class="dside"><span class="price">33</span><span class="tag">4-course</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Beef Tartare Cold Dog</h3><p class="desc">with goose fat, lecsó kimchi gremolata and Kettanaise sauce</p></div>
+        <div class="dside"><span class="price">38</span><span class="tag">4-course</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Trout Terminator</h3><p class="desc">with smoked eel, sautéed slippery jack mushrooms and a Hokkaido ume vinegar nage</p></div>
+        <div class="dside"><span class="price">45</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Old Styrian Breaded Veal Cheek</h3><p class="desc">on warm savoury egg custard with marinated beetroot, Styrian apple vinegar, horseradish and young nasturtium</p></div>
+        <div class="dside"><span class="price">48</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Paltental Mushroom Goulash</h3><p class="desc">with crispy Mangalitza crunch, breaded Veltliner crab on chanterelle goulash, paprika verde with cherry blossom vinegar</p></div>
+        <div class="dside"><span class="price">63</span><span class="tag">4-course</span></div>
+      </li>
+      <li class="dish gold">
+        <div class="dtext"><h3>Kamota’s Cheese Board</h3><p class="desc">with cheese from Kaas Kate and “Affineur Jumi”</p></div>
+        <div class="dside"><span class="price">28</span></div>
+      </li>
+      <li class="dish gold">
+        <div class="dtext"><h3>Gspusi from Schilcherland</h3><p class="desc">made from Blauer Wildbacher wine with Ennstal cream</p></div>
+        <div class="dside"><span class="price">22</span><span class="supp">+11 on the menu</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Coffee Trip</h3><p class="desc">with iced Kamota Arabica, caramelised puff pastry &amp; macerated raspberries</p></div>
+        <div class="dside"><span class="price">25</span><span class="tag">4-course</span></div>
+      </li></ul>
+      <table class="menutab"><thead><tr><td></td><th scope='col'>Menu</th><th scope='col'>Wine pairing</th></tr></thead><tbody><tr><th scope='row'>6 courses</th><td>166</td><td>99</td></tr><tr><th scope='row'>4 courses</th><td>127</td><td>66</td></tr></tbody></table>
+      <p class="note gold-note">Dishes marked in gold are not part of the menu – happy to add them as an extra.</p>
+      <p class="note">We are also happy to offer you a vegetarian or vegan menu – just ask us!</p></div>
+      </div>
+    </section>
+    <div class="cols2">
+      <section class="sec">
+        <h2>Pub Classics</h2>
+        <ul class="dishes">
+      <li class="dish">
+        <div class="dtext"><h3>Fried Chicken “Kamota”</h3><p class="desc">Ennstal spices, paprika sabayon, mountain pepper marinade &amp; hot peppers</p></div>
+        <div class="dside"><span class="price">29 | 35</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Rottenmann Cheese Spätzle</h3><p class="desc">with mountain cheese, crispy shallots &amp; yuzu wine sauce</p></div>
+        <div class="dside"><span class="price">27</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Cheese Meat Loaf Roll “Sando”</h3><p class="desc">with cheese meat loaf, butter brioche, wasabi sauerkraut &amp; hot pepper relish</p></div>
+        <div class="dside"><span class="price">28</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Grandma Kettner’s Kaiserschmarrn</h3><p class="desc">with gently stewed plums &amp; Tahitian vanilla ice cream</p></div>
+        <div class="dside"><span class="price">18</span></div>
+      </li></ul>
+      </section>
+      <section class="sec">
+        <h2>Special Treatment</h2>
+        <p class="note">Every Special Treatment dish can be added to your menu for a supplement.</p>
+        <ul class="dishes">
+      <li class="dish">
+        <div class="dtext"><p class="pre">Whole roasted suckling pig knuckle</p><h3>Kamota Schweinerei</h3><p class="desc">with wasabi sauerkraut, potatoes &amp; barbecue mustard hollandaise</p></div>
+        <div class="dside"><span class="price">78</span><span class="supp">+39 on the menu</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><p class="pre">Crispy roast beef from Wagyu A5, Kagoshima</p><h3>Land of Milk and Honey</h3><p class="desc">gently pan-fried goose liver, N25 caviar, unagi eel &amp; black truffle</p></div>
+        <div class="dside"><span class="price">133</span><span class="supp">+71 on the menu</span></div>
+      </li>
+      <li class="dish">
+        <div class="dtext"><h3>Long Dong Lobster Rossini</h3><p class="desc">with Wagyu A5 Kagoshima, pan-fried goose liver Ennstal style, black winter truffle &amp; St. Paul rock lobster</p></div>
+        <div class="dside"><span class="price">144</span><span class="supp">+77 on the menu</span></div>
+      </li></ul>
+      </section>
+      <section class="sec">
+        <h2>Aperitifs &amp; Cocktails</h2>
+        <h4 class="sub">Aperitif</h4><ul class="drinks"><li><div class="dtext"><h3 class="dname">Sisi</h3><p class="desc">Rosé sparkling wine · yuzu essence · fresh mint</p></div><span class="price">12</span></li><li><div class="dtext"><h3 class="dname">Franz</h3><p class="desc">Grüner Veltliner liqueur wine · Fever-Tree tonic water</p></div><span class="price">12</span></li><li><div class="dtext"><h3 class="dname">Kufsteiner Kutscher <span class="supp">alcohol-free</span></h3><p class="desc">Martini Floreale · Fever-Tree tonic water</p></div><span class="price">10</span></li><li><div class="dtext"><h3 class="dname">Niki Lauda <span class="supp">alcohol-free</span></h3><p class="desc">Martini Vibrante · yuzu essence · Almdudler</p></div><span class="price">10</span></li></ul><h4 class="sub">Cocktails</h4><ul class="drinks"><li><div class="dtext"><h3 class="dname">Ketti’s Japanese Pornstar</h3><p class="desc">Sake · passion fruit · vanilla · shiso · sakura · yuzu essence</p></div><span class="price">16</span></li><li><div class="dtext"><h3 class="dname">Negroni</h3><p class="desc">Gin · Campari · vermouth</p></div><span class="price">16</span></li><li><div class="dtext"><h3 class="dname">Espresso Martini</h3><p class="desc">Vodka · coffee liqueur · vanilla · espresso</p></div><span class="price">16</span></li></ul>
+      </section>
+      <section class="sec">
+        <h2>Champagne by the Glass</h2>
+        <h4 class="sub">Bonnaire <span class="place">Cramant</span></h4><p class="cols">Glass 0.15 l | Bottle 0.75 l</p><ul class="champ"><li><span class="vint">NV</span><h3 class="dname">Terroirs Grand Cru Blanc de Blancs</h3><span class="price">19 | 89</span></li><li><span class="vint">NV</span><h3 class="dname">Rosé Assemblage Brut</h3><span class="price">19 | 89</span></li></ul>
+      </section>
+    </div>
+    <p class="vat">All prices in euros, including statutory VAT</p>
+  </div>
+  </main>
+</div>
+<script>
+(function(){
+  function show(l){
+    document.querySelectorAll('.lang').forEach(function(s){ s.hidden = s.dataset.lang !== l; });
+    document.querySelectorAll('.switch button').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.lang === l)); });
+    document.documentElement.lang = l;
+  }
+  document.querySelectorAll('.switch button').forEach(function(b){ b.addEventListener('click', function(){ show(b.dataset.lang); }); });
+  if (location.hash === '#en') show('en');
+})();
+</script>

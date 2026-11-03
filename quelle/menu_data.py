@@ -1,0 +1,108 @@
+# Aktueller Inhalt der Speisekarte Kettner's Kamota (Stand 3. November 2026)
+# Gericht: (Name, Vorzeile, Beschreibung, Preis, 4-Gang, Menü-Aufpreis, gold)
+
+DE = {
+    "lang": "de",
+    "ch1": "Küss die Hand", "ch2": "Wirtshausklassiker", "ch3": "Extrawurst",
+    "tag4": "4-Gang",
+    "menu": [
+        ("Saibling, du Bohne!", None, "mit Nadelfisolen-Sakura-Salsa, mazeriertem Kopfsalat und saurer Sansho Milch", "33", True, None, False),
+        ("Beef Tatar Cold Dog", None, "mit Ganserlfett, Letscho Kimchi Gremolata und Sauce Kettanaise", "38", True, None, False),
+        ("Trout Terminator", None, "mit geselchtem Aal, sautierten Butterschwammerl und einer Hokkaido Ume Essig Nage", "45", False, None, False),
+        ("Altsteirisches Backfleisch vom Kalbsbackerl", None, "auf warmem Eierstich mit marinierten Roten Rüben, steirischem Apfelessig, Kren und junger Kapuzinerkresse", "48", False, None, False),
+        ("Paltentaler Schwammerlgulasch", None, "mit krossem Mangalitza Crunch, gebackener Veltliner Krabbe auf Pfifferlingsgulasch, Paprika Verde mit Kirschblütenessig", "63", True, None, False),
+        ("Kamotes Kaasbretl", None, "mit Käse von der Kaas Kate und „Affineur Jumi“", "28", False, None, True),
+        ("Gspusi aus dem Schilcherland", None, "vom Blauen Wildbacher mit Ennstaler Rahm", "22", False, "+11 im Menü", True),
+        ("Kaffeefahrt", None, "mit geeistem Kamota Arabica, karamellisiertem Blätterteig & mazerierten Himbeeren", "25", True, None, False),
+    ],
+    "menu_cols": ["Menü", "Weinbegleitung"],
+    "menu_rows": [("6 Gänge", "166", "99"), ("4 Gänge", "127", "66")],
+    "gold_note": "Gold markierte Gerichte sind nicht im Menü enthalten – gerne als Ergänzung.",
+    "veg": "Gerne offerieren wir Ihnen auch ein vegetarisches oder veganes Menü – sprechen Sie uns einfach an!",
+    "extra_label": "Kleine Extrawurst",
+    "extras": [("Wintertrüffel", "4 g", "20"), ("N25 Caviar", "10 g", "25")],
+    "classics": [
+        ("Backhendl „Kamota“", None, "Ennstaler Gewürz, Paprika Sabayon, Marinade vom Bergpfeffer & Pfefferoni", "29 | 35", False, None, False),
+        ("Rottenmanner Kaasnocken", None, "mit Bergkaas, knusprigen Schalotten & Yuzu Weinsosserl", "27", False, None, False),
+        ("Kasleberkäs-Semmel „Sando“", None, "mit Kasleberkäs, Butterstriezel, Wasabisauerkraut & Pfefferonischmiere", "28", False, None, False),
+        ("Oma Kettner’s Kaiserschmarrn", None, "mit sanft geschmorten Zwetschgen & Rahmeis von Tahiti Vanille", "18", False, None, False),
+    ],
+    "special_note": "Alle Gerichte der Extrawurst lassen sich gegen Aufpreis in Ihr Menü einbauen.",
+    "special": [
+        ("Kamota Schweinerei", "Im Ganzen gebackenes Spanferkelhaxerl", "mit Wasabi-Sauerkraut, Erdäpfel & Grillsenf-Hollandaise", "78", False, "+39 im Menü", False),
+        ("Schlaraffenland", "Knuspriges Roastbeef vom Wagyu A5 aus Kagoshima", "sanft gebratene Ganserlleber, N25 Caviar, Unagi Aal & schwarzer Trüffel", "133", False, "+71 im Menü", False),
+        ("Long Dong Langusten Rossini", None, "mit Wagyu A5 Kagoshima, gebratener Ganserlleber Ennstaler Art, schwarzem Wintertrüffel & St. Paul Languste", "144", False, "+77 im Menü", False),
+    ],
+    "drinks_title": "Aperitive & Cocktails",
+    "alc_free": "alkoholfrei",
+    "drinks": [
+        ("Aperitif", [
+            ("Sisi", "Rosé Winzersekt · Yuzu-Essenz · frische Minze", "12", False),
+            ("Franz", "Grüner Veltliner Likörwein · Fever-Tree Tonic Water", "12", False),
+            ("Kufsteiner Kutscher", "Martini Floreale · Fever-Tree Tonic Water", "10", True),
+            ("Niki Lauda", "Martini Vibrante · Yuzu-Essenz · Almdudler", "10", True),
+        ]),
+        ("Cocktails", [
+            ("Ketti’s Japanese Pornstar", "Sake · Maracuja · Vanille · Shiso · Sakura · Yuzu-Essenz", "16", False),
+            ("Negroni", "Gin · Campari · Vermouth", "16", False),
+            ("Espresso Martini", "Vodka · Kaffeelikör · Vanille · Espresso", "16", False),
+        ]),
+    ],
+    "champ_title": "Offene Champagner",
+    "champ_cols": "Glaserl 0,15 l | Flascherl 0,75 l",
+    "champ": [("Terroirs Grand Cru Blanc de Blancs", "NV", "19 | 89"), ("Rosé Assemblage Brut", "NV", "19 | 89")],
+    "price_note": "Alle Preise in Euro inklusive der gesetzlichen Mehrwertsteuer",
+}
+
+EN = {
+    "lang": "en",
+    "ch1": "I Kiss Your Hand", "ch2": "Pub Classics", "ch3": "Special Treatment",
+    "tag4": "4-course",
+    "menu": [
+        ("Char, You Silly Bean!", None, "Arctic char with green bean and sakura salsa, macerated butterhead lettuce and sour sansho milk", "33", True, None, False),
+        ("Beef Tartare Cold Dog", None, "with goose fat, lecsó kimchi gremolata and Kettanaise sauce", "38", True, None, False),
+        ("Trout Terminator", None, "with smoked eel, sautéed slippery jack mushrooms and a Hokkaido ume vinegar nage", "45", False, None, False),
+        ("Old Styrian Breaded Veal Cheek", None, "on warm savoury egg custard with marinated beetroot, Styrian apple vinegar, horseradish and young nasturtium", "48", False, None, False),
+        ("Paltental Mushroom Goulash", None, "with crispy Mangalitza crunch, breaded Veltliner crab on chanterelle goulash, paprika verde with cherry blossom vinegar", "63", True, None, False),
+        ("Kamota’s Cheese Board", None, "with cheese from Kaas Kate and “Affineur Jumi”", "28", False, None, True),
+        ("Gspusi from Schilcherland", None, "made from Blauer Wildbacher wine with Ennstal cream", "22", False, "+11 on the menu", True),
+        ("Coffee Trip", None, "with iced Kamota Arabica, caramelised puff pastry & macerated raspberries", "25", True, None, False),
+    ],
+    "menu_cols": ["Menu", "Wine pairing"],
+    "menu_rows": [("6 courses", "166", "99"), ("4 courses", "127", "66")],
+    "gold_note": "Dishes marked in gold are not part of the menu – happy to add them as an extra.",
+    "veg": "We are also happy to offer you a vegetarian or vegan menu – just ask us!",
+    "extra_label": "Small extra treat",
+    "extras": [("Winter truffle", "4 g", "20"), ("N25 caviar", "10 g", "25")],
+    "classics": [
+        ("Fried Chicken “Kamota”", None, "Ennstal spices, paprika sabayon, mountain pepper marinade & hot peppers", "29 | 35", False, None, False),
+        ("Rottenmann Cheese Spätzle", None, "with mountain cheese, crispy shallots & yuzu wine sauce", "27", False, None, False),
+        ("Cheese Meat Loaf Roll “Sando”", None, "with cheese meat loaf, butter brioche, wasabi sauerkraut & hot pepper relish", "28", False, None, False),
+        ("Grandma Kettner’s Kaiserschmarrn", None, "with gently stewed plums & Tahitian vanilla ice cream", "18", False, None, False),
+    ],
+    "special_note": "Every Special Treatment dish can be added to your menu for a supplement.",
+    "special": [
+        ("Kamota Schweinerei", "Whole roasted suckling pig knuckle", "with wasabi sauerkraut, potatoes & barbecue mustard hollandaise", "78", False, "+39 on the menu", False),
+        ("Land of Milk and Honey", "Crispy roast beef from Wagyu A5, Kagoshima", "gently pan-fried goose liver, N25 caviar, unagi eel & black truffle", "133", False, "+71 on the menu", False),
+        ("Long Dong Lobster Rossini", None, "with Wagyu A5 Kagoshima, pan-fried goose liver Ennstal style, black winter truffle & St. Paul rock lobster", "144", False, "+77 on the menu", False),
+    ],
+    "drinks_title": "Aperitifs & Cocktails",
+    "alc_free": "alcohol-free",
+    "drinks": [
+        ("Aperitif", [
+            ("Sisi", "Rosé sparkling wine · yuzu essence · fresh mint", "12", False),
+            ("Franz", "Grüner Veltliner liqueur wine · Fever-Tree tonic water", "12", False),
+            ("Kufsteiner Kutscher", "Martini Floreale · Fever-Tree tonic water", "10", True),
+            ("Niki Lauda", "Martini Vibrante · yuzu essence · Almdudler", "10", True),
+        ]),
+        ("Cocktails", [
+            ("Ketti’s Japanese Pornstar", "Sake · passion fruit · vanilla · shiso · sakura · yuzu essence", "16", False),
+            ("Negroni", "Gin · Campari · vermouth", "16", False),
+            ("Espresso Martini", "Vodka · coffee liqueur · vanilla · espresso", "16", False),
+        ]),
+    ],
+    "champ_title": "Champagne by the Glass",
+    "champ_cols": "Glass 0.15 l | Bottle 0.75 l",
+    "champ": [("Terroirs Grand Cru Blanc de Blancs", "NV", "19 | 89"), ("Rosé Assemblage Brut", "NV", "19 | 89")],
+    "price_note": "All prices in euros, including statutory VAT",
+}
