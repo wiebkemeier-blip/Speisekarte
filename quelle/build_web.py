@@ -26,8 +26,8 @@ def stamp(d):
 
 
 def price_table(d):
-    head = "".join(f"<th scope='col'>{E(c)}</th>" for c in d["menu_cols"])
-    body = "".join(f"<tr><th scope='row'>{E(a)}</th><td>{b}</td><td>{c}</td></tr>" for a, b, c in d["menu_rows"])
+    head = "".join(f"<th scope='col'><span class='lg'>{E(c)}</span><span class='sh' aria-hidden='true'>{E(s)}</span></th>" for c, s in zip(d["menu_cols"], d["menu_cols_short"]))
+    body = "".join("<tr><th scope='row'>" + E(r[0]) + "</th>" + "".join(f"<td>{E(v)}</td>" for v in r[1:]) + "</tr>" for r in d["menu_rows"])
     return f'''
       <table class="menutab"><thead><tr><td></td>{head}</tr></thead><tbody>{body}</tbody></table>
       <p class="note gold-note">{E(d["gold_note"])}</p>
@@ -122,8 +122,10 @@ ul{list-style:none;margin:0;padding:0}
 .st-row i{font-style:normal;opacity:.8}
 .st-row b{font-weight:500}
 .sec-menu .dishes{clear:none}
-.menutab{border-collapse:collapse;margin-top:26px;padding-top:0;border-top:1px solid var(--line);width:min(100%,420px);font-variant-numeric:tabular-nums}
-.menutab thead th{font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-align:right;padding:14px 0 6px}
+.menutab{border-collapse:collapse;margin-top:26px;padding-top:0;border-top:1px solid var(--line);width:100%;font-variant-numeric:tabular-nums}
+.menutab thead th{font-weight:500;font-size:11px;letter-spacing:.16em;line-height:1.35;text-transform:uppercase;color:var(--gold);text-align:right;vertical-align:bottom;padding:14px 0 6px 14px}
+.menutab thead th:last-child{max-width:12em}
+.menutab .sh{display:none}
 .menutab tbody th{text-align:left;font-weight:400;padding:6px 0}
 .menutab td{text-align:right;font-weight:500;padding:6px 0}
 .note{margin:10px 0 0;color:var(--muted);font-size:14px;max-width:62ch}
@@ -144,6 +146,9 @@ ul{list-style:none;margin:0;padding:0}
   .st-in{min-width:0}
 }
 @media (max-width:520px){
+  .menutab thead th{letter-spacing:.08em;padding-left:10px}
+  .menutab .lg{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .menutab .sh{display:inline}
   .dish{gap:12px}
 }
 """
