@@ -86,7 +86,7 @@ def lang_block(d, hidden):
 
 CSS = """
 :root{
-  --paper:#FFFFFF; --ink:#161615; --muted:#5E5E58; --gold:#9C8550; --gold-ui:#B8A068;
+  --paper:#FFFFFF; --ink:#161615; --muted:#5E5E58; --gold:#8D7535; --gold-ui:#B8A068;
   --pink:#DE19AD; --pill:#ECEAE5; --line:#161615;
   --sans:"Jost","Futura","Century Gothic",system-ui,sans-serif;
   color-scheme: light;
