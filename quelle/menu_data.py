@@ -51,7 +51,7 @@ DE = {
     ],
     "champ_title": "Offene Champagner",
     "champ_cols": "Glaserl 0,15 l | Flascherl 0,75 l",
-    "champ": [("Terroirs Grand Cru Blanc de Blancs", "NV", "19 | 89"), ("Rosé Assemblage Brut", "NV", "19 | 89")],
+    "champ": [("Terroirs Grand Cru Blanc de Blancs", "NV", "20 | 90"), ("Rosé Assemblage Brut", "NV", "20 | 90")],
     "price_note": "Alle Preise in Euro inklusive der gesetzlichen Mehrwertsteuer",
 }
 
@@ -105,6 +105,6 @@ EN = {
     ],
     "champ_title": "Champagne by the Glass",
     "champ_cols": "Glass 0.15 l | Bottle 0.75 l",
-    "champ": [("Terroirs Grand Cru Blanc de Blancs", "NV", "19 | 89"), ("Rosé Assemblage Brut", "NV", "19 | 89")],
+    "champ": [("Terroirs Grand Cru Blanc de Blancs", "NV", "20 | 90"), ("Rosé Assemblage Brut", "NV", "20 | 90")],
     "price_note": "All prices in euros, including statutory VAT",
 }
