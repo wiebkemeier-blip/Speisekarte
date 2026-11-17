@@ -1,4 +1,4 @@
-# Aktueller Inhalt der Speisekarte Kettner's Kamota (Stand 4. November 2026)
+# Aktueller Inhalt der Speisekarte Kettner's Kamota (Stand 17. November 2026)
 # Gericht: (Name, Vorzeile, Beschreibung, Preis, 4-Gang, Menü-Aufpreis, gold)
 
 DE = {
@@ -17,7 +17,7 @@ DE = {
     ],
     "menu_cols": ["Menü", "Weinbegleitung", "Hausgemachte alkoholfreie Begleitung"],
     "menu_cols_short": ["Menü", "Wein", "Alkoholfrei"],
-    "menu_rows": [("6 Gänge", "166", "99", "99"), ("4 Gänge", "127", "66", "66")],
+    "menu_rows": [("6 Gänge", "177", "99", "99"), ("4 Gänge", "137", "66", "66")],
     "gold_note": "Gold markierte Gerichte sind nicht im Menü enthalten – gerne als Ergänzung.",
     "veg": "Gerne offerieren wir Ihnen auch ein vegetarisches oder veganes Menü – sprechen Sie uns einfach an!",
     "extra_label": "Kleine Extrawurst",
@@ -26,7 +26,7 @@ DE = {
         ("Backhendl „Kamota“", None, "Ennstaler Gewürz, Paprika Sabayon, Marinade vom Bergpfeffer & Pfefferoni", "29 | 35", False, None, False),
         ("Rottenmanner Kaasnocken", None, "mit Bergkaas, knusprigen Schalotten & Yuzu Weinsosserl", "27", False, None, False),
         ("Kasleberkäs-Semmel „Sando“", None, "mit Kasleberkäs, Butterstriezel, Wasabisauerkraut & Pfefferonischmiere", "28", False, None, False),
-        ("Oma Kettner’s Kaiserschmarrn", None, "mit sanft geschmorten Zwetschgen & Rahmeis von Tahiti Vanille", "18", False, None, False),
+        ("Oma Kettner’s Kaiserschmarrn", None, "mit sanft geschmorten Zwetschgen & Rahmeis von Tahiti Vanille", "20", False, None, False),
     ],
     "special_note": "Alle Gerichte der Extrawurst lassen sich gegen Aufpreis in Ihr Menü einbauen.",
     "special": [
@@ -71,7 +71,7 @@ EN = {
     ],
     "menu_cols": ["Menu", "Wine pairing", "Homemade alcohol-free pairing"],
     "menu_cols_short": ["Menu", "Wine", "Alcohol-free"],
-    "menu_rows": [("6 courses", "166", "99", "99"), ("4 courses", "127", "66", "66")],
+    "menu_rows": [("6 courses", "177", "99", "99"), ("4 courses", "137", "66", "66")],
     "gold_note": "Dishes marked in gold are not part of the menu – happy to add them as an extra.",
     "veg": "We are also happy to offer you a vegetarian or vegan menu – just ask us!",
     "extra_label": "Small extra treat",
@@ -80,7 +80,7 @@ EN = {
         ("Fried Chicken “Kamota”", None, "Ennstal spices, paprika sabayon, mountain pepper marinade & hot peppers", "29 | 35", False, None, False),
         ("Rottenmann Cheese Spätzle", None, "with mountain cheese, crispy shallots & yuzu wine sauce", "27", False, None, False),
         ("Cheese Meat Loaf Roll “Sando”", None, "with cheese meat loaf, butter brioche, wasabi sauerkraut & hot pepper relish", "28", False, None, False),
-        ("Grandma Kettner’s Kaiserschmarrn", None, "with gently stewed plums & Tahitian vanilla ice cream", "18", False, None, False),
+        ("Grandma Kettner’s Kaiserschmarrn", None, "with gently stewed plums & Tahitian vanilla ice cream", "20", False, None, False),
     ],
     "special_note": "Every Special Treatment dish can be added to your menu for a supplement.",
     "special": [
