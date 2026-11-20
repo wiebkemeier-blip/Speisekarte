@@ -1,4 +1,4 @@
-# Aktueller Inhalt der Speisekarte Kettner's Kamota (Stand 17. November 2026)
+# Aktueller Inhalt der Speisekarte Kettner's Kamota (Stand 20. November 2026)
 # Gericht: (Name, Vorzeile, Beschreibung, Preis, 4-Gang, Menü-Aufpreis, gold)
 
 DE = {
@@ -12,8 +12,8 @@ DE = {
         ("Altsteirisches Backfleisch vom Kalbsbackerl", None, "auf warmem Eierstich mit marinierten Roten Rüben, steirischem Apfelessig, Kren und junger Kapuzinerkresse", "48", False, None, False),
         ("Linzer Auge „Reh Rossini“", None, "mit Rehrücken aus Tiroler Jagd, Blaukraut Watschn, Ganserlleber und Périgord Trüffelnaise", "63", True, None, False),
         ("Kamotes Kaasbretl", None, "mit Käse von der Kaas Kate und „Affineur Jumi“", "28", False, None, True),
-        ("Gspusi aus dem Schilcherland", None, "vom Blauen Wildbacher mit Ennstaler Rahm", "22", False, "+11 im Menü", True),
-        ("Kaffeefahrt", None, "mit geeistem Kamota Arabica, karamellisiertem Blätterteig & mazerierten Himbeeren", "25", True, None, False),
+        ("Gspusi aus dem Schilcherland", None, "vom Blauen Wildbacher mit Ennstaler Rahm", "22", True, None, False),
+        # vorübergehend raus (20.11.2026): ("Kaffeefahrt", None, "mit geeistem Kamota Arabica, karamellisiertem Blätterteig & mazerierten Himbeeren", "25", True, None, False),
     ],
     "menu_cols": ["Menü", "Weinbegleitung", "Hausgemachte alkoholfreie Begleitung"],
     "menu_cols_short": ["Menü", "Wein", "Alkoholfrei"],
@@ -66,8 +66,8 @@ EN = {
         ("Old Styrian Breaded Veal Cheek", None, "on warm savoury egg custard with marinated beetroot, Styrian apple vinegar, horseradish and young nasturtium", "48", False, None, False),
         ("Linzer Eye “Venison Rossini”", None, "with saddle of venison from Tyrolean hunt, red cabbage “Watschn”, goose liver and Périgord truffle-naise", "63", True, None, False),
         ("Kamota’s Cheese Board", None, "with cheese from Kaas Kate and “Affineur Jumi”", "28", False, None, True),
-        ("Gspusi from Schilcherland", None, "made from Blauer Wildbacher wine with Ennstal cream", "22", False, "+11 on the menu", True),
-        ("Coffee Trip", None, "with iced Kamota Arabica, caramelised puff pastry & macerated raspberries", "25", True, None, False),
+        ("Gspusi from Schilcherland", None, "made from Blauer Wildbacher wine with Ennstal cream", "22", True, None, False),
+        # vorübergehend raus (20.11.2026): ("Coffee Trip", None, "with iced Kamota Arabica, caramelised puff pastry & macerated raspberries", "25", True, None, False),
     ],
     "menu_cols": ["Menu", "Wine pairing", "Homemade alcohol-free pairing"],
     "menu_cols_short": ["Menu", "Wine", "Alcohol-free"],
