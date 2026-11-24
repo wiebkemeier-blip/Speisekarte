@@ -1,4 +1,4 @@
-# Aktueller Inhalt der Speisekarte Kettner's Kamota (Stand 20. November 2026)
+# Aktueller Inhalt der Speisekarte Kettner's Kamota (Stand 24. November 2026)
 # Gericht: (Name, Vorzeile, Beschreibung, Preis, 4-Gang, Menü-Aufpreis, gold)
 
 DE = {
@@ -8,7 +8,7 @@ DE = {
     "menu": [
         ("Saibling, du Bohne!", None, "mit Nadelfisolen-Sakura-Salsa, mazeriertem Kopfsalat und saurer Sansho Milch", "33", True, None, False),
         ("Beef Tatar Cold Dog", None, "mit Ganserlfett, Letscho Kimchi Gremolata und Sauce Kettanaise", "38", True, None, False),
-        ("Trout Terminator", None, "mit geselchtem Aal, sautierten Butterschwammerl und einer Hokkaido Ume Essig Nage", "45", False, None, False),
+        ("Waller Beinhart", None, "mit gebackenem Waller, lackiertem Aal, Lauchgerstl, Selzthaler Negi Ponzu und Schalotten Nage", "45", False, None, False),
         ("Altsteirisches Backfleisch vom Kalbsbackerl", None, "auf warmem Eierstich mit marinierten Roten Rüben, steirischem Apfelessig, Kren und junger Kapuzinerkresse", "48", False, None, False),
         ("Linzer Auge „Reh Rossini“", None, "mit Rehrücken aus Tiroler Jagd, Blaukraut Watschn, Ganserlleber und Périgord Trüffelnaise", "63", True, None, False),
         ("Kamotes Kaasbretl", None, "mit Käse von der Kaas Kate und „Affineur Jumi“", "28", False, None, True),
@@ -62,7 +62,7 @@ EN = {
     "menu": [
         ("Char, You Silly Bean!", None, "Arctic char with green bean and sakura salsa, macerated butterhead lettuce and sour sansho milk", "33", True, None, False),
         ("Beef Tartare Cold Dog", None, "with goose fat, lecsó kimchi gremolata and Kettanaise sauce", "38", True, None, False),
-        ("Trout Terminator", None, "with smoked eel, sautéed slippery jack mushrooms and a Hokkaido ume vinegar nage", "45", False, None, False),
+        ("Hardcore Catfish", None, "with fried wels catfish, glazed eel, leek barley, Selzthal negi ponzu and shallot nage", "45", False, None, False),
         ("Old Styrian Breaded Veal Cheek", None, "on warm savoury egg custard with marinated beetroot, Styrian apple vinegar, horseradish and young nasturtium", "48", False, None, False),
         ("Linzer Eye “Venison Rossini”", None, "with saddle of venison from Tyrolean hunt, red cabbage “Watschn”, goose liver and Périgord truffle-naise", "63", True, None, False),
         ("Kamota’s Cheese Board", None, "with cheese from Kaas Kate and “Affineur Jumi”", "28", False, None, True),
